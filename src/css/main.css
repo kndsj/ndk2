@@ -1,0 +1,364 @@
+/* CSS VARIABLES */
+
+:root {
+    --primary: #141414;
+    --light: #F3F3F3;
+    --dark: #686868;
+}
+
+@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+html,
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: #212121;
+    height: 100%;
+}
+
+.at {
+    transition: 1s ease all;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+nav {
+    z-index: 1;
+}
+
+.uuuu {
+    z-index: 999999;
+    width: 100% !important;
+    height: 140% !important;
+    background: #201E26;
+    margin-top: 770px;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.text {
+    font-weight: 100;
+    font-size: 34px;
+    color: #fafafa;
+}
+
+.dud {
+    color: #757575;
+}
+
+.animate__animated.animate__fadeIn {
+    --animate-duration: 4s;
+}
+
+.al {
+    margin-top: 150px !important;
+}
+
+h3 {
+    margin-top: 200px !important;
+}
+
+.verr {
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    width: 200px;
+}
+
+.aa {
+    margin-top: 20px;
+}
+
+.txt1 {
+    font-weight: bold;
+}
+
+.nnnn {
+    border-radius: 10px;
+}
+
+.comienzo {
+    height: 400px;
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+.osu a {
+    color: white !important;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 60px !important;
+    font-family: 'Dancing Script', cursive;
+}
+
+.navbar-text {
+    margin-right: 30px !important;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/n.jpg");
+    background-repeat: no-repeat;
+    color: var(--light) !important;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    line-height: 1.4;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    margin-top: 200px;
+    font-weight: bold !important;
+    font-size: 40px !important;
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* HEADER */
+
+header {
+    padding: 20px 20px 0 20px;
+    position: fixed;
+    top: 0;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: "nt mn mn sb . . . ";
+    background-color: var(--primary);
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.netflixLogo {
+    grid-area: nt;
+    object-fit: cover;
+    width: 100px;
+    max-height: 100%;
+    padding-left: 30px;
+    padding-top: 0px;
+}
+
+.netflixLogo img {
+    height: 35px;
+}
+
+#logo {
+    color: #E50914;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav {
+    grid-area: mn;
+    padding: 0 30px 0 20px;
+}
+
+.main-nav a {
+    color: var(--light);
+    text-decoration: none;
+    margin: 5px;
+}
+
+.main-nav a:hover {
+    color: var(--dark);
+}
+
+.sub-nav {
+    grid-area: sb;
+    padding: 0 40px 0 40px;
+}
+
+.sub-nav a {
+    color: var(--light);
+    text-decoration: none;
+    margin: 5px;
+}
+
+.sub-nav a:hover {
+    color: var(--dark);
+}
+
+
+/* MAIN CONTIANER */
+
+.main-container {
+    background: black;
+    margin-top: 200px !important;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.box {
+    font-weight: bold;
+    display: grid;
+    grid-gap: 20px;
+    background: black !important;
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+}
+
+.box a {
+    transition: transform .3s;
+}
+
+.box a:hover {
+    transition: transform .3s;
+    -ms-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+}
+
+.box img {
+    border-radius: 14px;
+}
+
+
+/* LINKS */
+
+.link {
+    padding: 50px;
+}
+
+.sub-links ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.sub-links a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.sub-links a:hover {
+    color: var(--dark);
+    text-decoration: underline;
+}
+
+.logos a {
+    padding: 10px;
+}
+
+.logo {
+    color: var(--dark);
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: var(--dark);
+    margin: 10px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media(max-width: 900px) {
+    header {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "nt nt nt  .  .  . sb . . . " "mn mn mn mn mn mn  mn mn mn mn";
+    }
+    .box {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(4, minmax(100px, 1fr));
+    }
+}
+
+@media(max-width: 700px) {
+    header {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "nt nt nt  .  .  . sb . . . " "mn mn mn mn mn mn  mn mn mn mn";
+    }
+    .box {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+    }
+    .sub-links ul {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 500px) {
+    .wrapper {
+        font-size: 15px;
+    }
+    header {
+        margin: 0;
+        padding: 20px 0 0 0;
+        position: static;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "nt" "mn" "sb";
+        text-align: center;
+    }
+    .netflixLogo {
+        max-width: 100%;
+        margin: auto;
+        padding-right: 20px;
+    }
+    .main-nav {
+        display: grid;
+        grid-gap: 0px;
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+    h1 {
+        text-align: center;
+        font-size: 18px;
+    }
+    .box {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+    .box a:hover {
+        transition: transform .3s;
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1.2);
+    }
+    .logos {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+    }
+    .sub-links ul {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+        font-size: 15px;
+    }
+}

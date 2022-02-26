@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/des.css">
+    <link rel="stylesheet" href="../css/decifrar2.css">
+    <script src="../js/decifrar.js"></script>
+    <title>Regalo</title>
+</head>
+
+
+<figure class="give-love">
+    <div class="hole">
+        <div class="platform"> </div>
+    </div>
+    <div class="platform-wrap">
+        <div class="hearth">
+            <div class="left-side"> </div>
+            <div class="right-side"> </div>
+        </div>
+        <div class="hearth-shadow"> </div>
+    </div>
+</figure>
+
+
+
+
+<div class="all">
+    <strong class="text">Amor estas a 1 paso de reclamar tu regalo</strong><br>
+    <div class="te">
+        <p>Simplemente tienes que adivinar una frase que siempre te digo, si no lo logras tendras que esperar, no te preocupes amor no hay prisa, te amo mi vida❤️</p>
+    </div>
+    <br><input id="ss" type="text" placeholder="*o ****** **** **n**** *m** *e ***">
+    <button class="bb" id="bbt" onclick="hoña()">Probar</button>
+    <strong class="ociltar" id="sssh">Incorrecto, Intentalo de nuevo🤣❤️</strong>
+
+</div>
+
+<div class="hearth-ypos" style="left: 300px">
+    <div class="hearth-xpos">
+        <div class="hearth">
+            <img width="60" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Emoji_u2665.svg">
+        </div>
+        <div class="hearth-xpos">
+        </div>
+    </div>
+
+
+
+    <script>
+        function hoña() {
+            const bbt = document.getElementById("bbt")
+            const ss = document.getElementById("ss").value
+            const h = document.getElementById("sssh")
+            if (ss.toLowerCase() === "lo quiero todo contigo amor te amo") {
+                alert("Amor muchas felicidades, mandame mensaje diciendo: LO LOGRE")
+            } else {
+                h.style.display = "block"
+                setTimeout(function() {
+                    h.style.display = "none"
+                }, 2500);
+            }
+        }
+    </script>
+    </body>
+
+</html>

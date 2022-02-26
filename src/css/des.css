@@ -1,0 +1,209 @@
+body {
+    min-height: 100vh;
+    background: #EEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.give-love {
+    width: 250px;
+    height: 150px;
+    margin-top: 150px;
+}
+
+.hole {
+    width: 100%;
+    height: 100%;
+    background: #DDD;
+    border: 1px solid #EEE;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.platform {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    border-radius: 50%;
+    animation: platform 8s infinite;
+}
+
+@keyframes platform {
+    from,
+    20%,
+    60%,
+    to {
+        background: #EEE;
+        transform: translateY(0);
+    }
+    40% {
+        background: #888;
+        transform: translateY(150%);
+    }
+}
+
+.platform-wrap {
+    width: 250px;
+    height: 300px;
+    margin: -302px 0 0 2px;
+    border-bottom-right-radius: 125px 75px;
+    border-bottom-left-radius: 125px 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    animation: platform-wrap 10 s infinite;
+}
+
+@keyframes platform-wrap {
+    from,
+    80% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.hearth {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 50px;
+    transform: rotate(-45deg);
+    animation: hearth 1s ease-in-out infinite alternate;
+}
+
+@keyframes hearth {
+    to {
+        margin-bottom: 75px;
+    }
+}
+
+.hearth .left-side,
+.hearth .right-side {
+    background: #F43;
+}
+
+.hearth .left-side {
+    width: 100px;
+    height: 150px;
+    border-radius: 50px 50px 0 10px;
+}
+
+.hearth .right-side {
+    width: 150px;
+    height: 100px;
+    margin-top: -100px;
+    border-radius: 0 50px 50px 10px;
+}
+
+.hearth-shadow {
+    width: 150px;
+    height: 25px;
+    background: #CCC;
+    border-radius: 50%;
+    animation: hearth-shadow 8s infinite;
+}
+
+@keyframes hearth-shadow {
+    from,
+    40% {
+        margin-bottom: -250px;
+    }
+    60%,
+    to {
+        margin-bottom: 50px;
+    }
+}
+
+.all {
+    margin-left: 200px !important;
+}
+
+input {
+    background: #c3c2c2;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    width: 240px;
+    border: none;
+}
+
+.te {
+    width: 600px;
+}
+
+.bb {
+    background: #979797;
+    border: none;
+    color: white;
+    padding: 5px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.ociltar {
+    margin-top: 10px;
+    display: none;
+}
+
+.s {
+    display: block;
+}
+
+.hearth-ypos {
+    transition: 1s ease all !important;
+    transform: rotate(50deg);
+    bottom: -60px;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    animation-name: yanim;
+    animation-iteration-count: infinite;
+}
+
+@keyframes yanim {
+    0% {
+        bottom: 55%;
+        opacity: 0;
+        left: 30%;
+    }
+    50% {
+        left: 30%;
+        bottom: 5%;
+        opacity: 0;
+    }
+    70% {
+        left: 42%;
+        opacity: 1;
+        bottom: 47%;
+    }
+    100% {
+        bottom: 200vh;
+        opacity: 0;
+    }
+}
+
+.hearth-xpos {
+    transition: 1s ease all !important;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    animation-name: xanim;
+    animation-iteration-count: infinite;
+}
+
+@keyframes xanim {
+    0% {
+        left: -50px;
+    }
+    50% {
+        left: 50px;
+    }
+    100% {
+        left: -50px;
+    }
+}

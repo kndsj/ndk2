@@ -1,0 +1,215 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="main.js"></script>
+</head>
+
+<body class="animate__animated animate__fadeIn">
+
+    <div class="at" id="olok">
+
+        <div class="uuuu" id="bok">
+            <div class="text"></div>
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg osu">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./src/img/net.png" alt="" width="100" class="d-inline-block align-text-top">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Una serie inolvidable</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="comienzo container">
+
+        <div class="row">
+            <div class="col-md-6 al">
+                <h1>El comienzo de algo nuevo con el amor de mi vida❤️</h1>
+                <div class="aa">
+                    <label class="txt1">02/02/2022</label> <label for="" class="txt1">| Temporada 1 |</label> <label for="" class="txt1">Unico e indiferente</label>
+                </div>
+
+                <p>Llego el amor de mi vida, llego mi felicidad, el cambio que necesitaba un amor y realidad sincera. Comienza algo inolvidable </p>
+                <button class="verr" id="btna">Ver ahora</button>
+            </div>
+            <div class="col-md-6">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="wrapper">
+
+
+
+        <!-- MAIN CONTAINER -->
+        <section class="main-container">
+            <div class="location" id="home">
+                <h1 id="home">Mas Capitulos</h1>
+                <p>Posibles cosas que marcan nuestra vida❤️</p>
+                <div class="box">
+                    <a><img src="./src/img/1.jpg" alt=""></a>
+                    <a><img src="./src/img/2.jpg" alt=""></a>
+                    <a><img src="./src/img/3.jpg" alt=""></a>
+                    <a><img src="./src/img/5.jpg" alt=""></a>
+                    <a><img src="./src/img/6.jpg" alt=""></a>
+                    <a><img src="./src/img/4.jpg" alt=""></a>
+                </div>
+            </div>
+
+
+
+
+
+    </div>
+
+
+
+
+    <script>
+        setTimeout(function() {
+            document.getElementById("olok").style.opacity = "1";
+            const music = new Audio('src/img/mu.mp3');
+            music.play();
+            music.volume = 1;
+            class TextScramble {
+                constructor(el) {
+                    this.el = el
+                    this.chars = ' N A D I A '
+                    this.update = this.update.bind(this)
+                }
+                setText(newText) {
+                    const oldText = this.el.innerText
+                    const length = Math.max(oldText.length, newText.length)
+                    const promise = new Promise((resolve) => this.resolve = resolve)
+                    this.queue = []
+                    for (let i = 0; i < length; i++) {
+                        const from = oldText[i] || ''
+                        const to = newText[i] || ''
+                        const start = Math.floor(Math.random() * 40)
+                        const end = start + Math.floor(Math.random() * 40)
+                        this.queue.push({
+                            from,
+                            to,
+                            start,
+                            end
+                        })
+                    }
+                    cancelAnimationFrame(this.frameRequest)
+                    this.frame = 0
+                    this.update()
+                    return promise
+                }
+                update() {
+                    let output = ''
+                    let complete = 0
+                    for (let i = 0, n = this.queue.length; i < n; i++) {
+                        let {
+                            from,
+                            to,
+                            start,
+                            end,
+                            char
+                        } = this.queue[i]
+                        if (this.frame >= end) {
+                            complete++
+                            output += to
+                        } else if (this.frame >= start) {
+                            if (!char || Math.random() < 0.28) {
+                                char = this.randomChar()
+                                this.queue[i].char = char
+                            }
+                            output += `<span class="dud">${char}</span>`
+                        } else {
+                            output += from
+                        }
+                    }
+                    this.el.innerHTML = output
+                    if (complete === this.queue.length) {
+                        this.resolve()
+                    } else {
+                        this.frameRequest = requestAnimationFrame(this.update)
+                        this.frame++
+                    }
+                }
+                randomChar() {
+                    return this.chars[Math.floor(Math.random() * this.chars.length)]
+                }
+            }
+
+            const phrases = [
+                'Mi amor❤️',
+                'Mi niña❤️',
+                'Mi vida💘',
+                "Probablemente te preguntes",
+                "¿Por que Netflix?🤔",
+                "y es que",
+                'Quiero que el aqui y ahora',
+                'Sea como una pelicula🥺',
+                'Donde cada',
+                "Meta",
+                'Logro',
+                'Objetivo',
+                'Incluso desafio',
+                'Sea un capitulo mas',
+                'De nuestra historia',
+                'Nosotros seremos los mejores protagonistas',
+                'Y estoy mas que seguro',
+                'Que elegi al mejor equipo del mundo🥺',
+                'Aqui sera donde se ira agregando ',
+                'Cada cosa que vayamos logrando juntos❤️',
+                "Esto apenas es el inicio de una gran aventura",
+                "Donde quiero que esta aventura",
+                "Dure TODA MI VIDA",
+                "Te amo tanto nadia❤️",
+            ]
+
+            const el = document.querySelector('.text')
+            const fx = new TextScramble(el)
+
+            let counter = 0
+            const next = () => {
+                fx.setText(phrases[counter]).then(() => {
+                    setTimeout(next, 2000)
+                })
+                counter = (counter + 1) % phrases.length
+            }
+
+            next()
+            setTimeout(function() {
+                document.getElementById("olok").style.opacity = "0";
+                document.getElementById("olok").style.display = "none";
+                music.pause()
+            }, 59200);
+        }, 5000);
+
+        document.getElementById("btna").addEventListener("click", function() {
+            window.open("src/page/scroll.html");
+        })
+    </script>
+
+</body>
+
+</html>
