@@ -22,6 +22,10 @@
         </div>
     </div>
 
+    <div class="containera">
+        <div class="text"></div>
+    </div>
+
     <nav class="navbar navbar-expand-lg osu">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -48,6 +52,7 @@
 
                 <p>Llego el amor de mi vida, llego mi felicidad, el cambio que necesitaba un amor y realidad sincera. Comienza algo inolvidable </p>
                 <button class="verr" id="btna">Ver ahora</button>
+                <button class="verr2" id="btna">Ver Proximo Capitulo</button>
             </div>
             <div class="col-md-6 container-fluid bglg">
 
@@ -55,7 +60,7 @@
         </div>
     </div>
 
-    <div class="wrapper ">
+    <div class="wrapper">
         <!-- MAIN CONTAINER -->
         <section class="main-container ">
             <div class="location" id="home">
@@ -66,48 +71,11 @@
                     <a><img src="./src/img/2.jpg" alt=""></a>
                     <a><img src="./src/img/3.jpg" alt=""></a>
                     <a><img src="./src/img/5.jpg" alt=""></a>
-                    <a><img src="./src/img/4.jpg" style="margin-bottom: 300px !important;" alt=""></a>
+                    <a><img src="./src/img/4.jpg" style="margin-bottom: 100px !important;" alt=""></a>
                 </div>
             </div>
     </div>
     </div>
-
-
-    <div id="drag-container">
-        <div id="spin-container">
-            <!-- Add your images (or video) here -->
-            <img src="https://images.pexels.com/photos/206395/pexels-photo-206395.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-            <img src="https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-            <img src="https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-            <img src="https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-            <img src="https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-            <img src="https://images.pexels.com/photos/1462636/pexels-photo-1462636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-
-            <!-- Example image with link -->
-            <a target="_blank" href="https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg">
-                <img src="https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-            </a>
-
-
-            <!-- Text at center of ground -->
-            <p>Te amo Nadia</p>
-        </div>
-        <div id="ground"></div>
-    </div>
-
-    <div id="music-container" style="display: none;"></div>
-
-
-
-
-
-
-
-
-
-
-
-
 
     <style>
         .github-corner:hover .octo-arm {
@@ -142,179 +110,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script>
-        // Author: Hoang Tran (https://www.facebook.com/profile.php?id=100004848287494)
-        // Github verson (1 file .html): https://github.com/HoangTran0410/3DCarousel/blob/master/index.html
-
-
-        // You can change global variables here:
-        var radius = 240; // how big of the radius
-        var autoRotate = true; // auto rotate or not
-        var rotateSpeed = -60; // unit: seconds/360 degrees
-        var imgWidth = 120; // width of images (unit: px)
-        var imgHeight = 170; // height of images (unit: px)
-
-        // Link of background music - set 'null' if you dont want to play background music
-        var bgMusicURL = 'https://api.soundcloud.com/tracks/143041228/stream?client_id=587aa2d384f7333a886010d5f52f302a';
-        var bgMusicControls = true; // Show UI music control
-
-        /*
-             NOTE:
-               + imgWidth, imgHeight will work for video
-               + if imgWidth, imgHeight too small, play/pause button in <video> will be hidden
-               + Music link are taken from: https://hoangtran0410.github.io/Visualyze-design-your-own-/?theme=HauMaster&playlist=1&song=1&background=28
-               + Custom from code in tiktok video  https://www.facebook.com/J2TEAM.ManhTuan/videos/1353367338135935/
-        */
-
-
-        // ===================== start =======================
-        // animation start after 1000 miliseconds
-        setTimeout(init, 1000);
-
-        var odrag = document.getElementById('drag-container');
-        var ospin = document.getElementById('spin-container');
-        var aImg = ospin.getElementsByTagName('img');
-        var aVid = ospin.getElementsByTagName('video');
-        var aEle = [...aImg, ...aVid]; // combine 2 arrays
-
-        // Size of images
-        ospin.style.width = imgWidth + "px";
-        ospin.style.height = imgHeight + "px";
-
-        // Size of ground - depend on radius
-        var ground = document.getElementById('ground');
-        ground.style.width = radius * 3 + "px";
-        ground.style.height = radius * 3 + "px";
-
-        function init(delayTime) {
-            for (var i = 0; i < aEle.length; i++) {
-                aEle[i].style.transform = "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(" + radius + "px)";
-                aEle[i].style.transition = "transform 1s";
-                aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + "s";
-            }
-        }
-
-        function applyTranform(obj) {
-            // Constrain the angle of camera (between 0 and 180)
-            if (tY > 180) tY = 180;
-            if (tY < 0) tY = 0;
-
-            // Apply the angle
-            obj.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";
-        }
-
-        function playSpin(yes) {
-            ospin.style.animationPlayState = (yes ? 'running' : 'paused');
-        }
-
-        var sX, sY, nX, nY, desX = 0,
-            desY = 0,
-            tX = 0,
-            tY = 10;
-
-        // auto spin
-        if (autoRotate) {
-            var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');
-            ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
-        }
-
-        // add background music
-        if (bgMusicURL) {
-            document.getElementById('music-container').innerHTML += `
-<audio src="${bgMusicURL}" ${bgMusicControls? 'controls': ''} autoplay loop>    
-<p>If you are reading this, it is because your browser does not support the audio element.</p>
-</audio>
-`;
-        }
-
-        // setup events
-        document.onpointerdown = function(e) {
-            clearInterval(odrag.timer);
-            e = e || window.event;
-            var sX = e.clientX,
-                sY = e.clientY;
-
-            this.onpointermove = function(e) {
-                e = e || window.event;
-                var nX = e.clientX,
-                    nY = e.clientY;
-                desX = nX - sX;
-                desY = nY - sY;
-                tX += desX * 0.1;
-                tY += desY * 0.1;
-                applyTranform(odrag);
-                sX = nX;
-                sY = nY;
-            };
-
-            this.onpointerup = function(e) {
-                odrag.timer = setInterval(function() {
-                    desX *= 0.95;
-                    desY *= 0.95;
-                    tX += desX * 0.1;
-                    tY += desY * 0.1;
-                    applyTranform(odrag);
-                    playSpin(false);
-                    if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
-                        clearInterval(odrag.timer);
-                        playSpin(true);
-                    }
-                }, 17);
-                this.onpointermove = this.onpointerup = null;
-            };
-
-            return false;
-        };
-
-        document.onmousewheel = function(e) {
-            e = e || window.event;
-            var d = e.wheelDelta / 20 || -e.detail;
-            radius += d;
-            init(1);
-        };
-
-
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.utils.toArray('.marquee').forEach((el, index) => {
-            const w = el.querySelector('.track');
-            console.log(w.scroll())
-            const [x, xEnd] = (index % 2 == 0) ? [-500, -1500] : [-500, 0];
-            gsap.fromTo(w, {
-                x
-            }, {
-                x: xEnd,
-                scrollTrigger: {
-                    scrub: 1
-                }
-            });
-        });
-
-        const centerContent = document.getElementById('center-content');
-        const centerFold = document.getElementById('center-fold');
-        const foldsContent = Array.from(document.querySelectorAll('.fold-content'));
-
-        let targetScroll = -(
-            document.documentElement.scrollTop || document.body.scrollTop
-        );
-        let currentScroll = targetScroll;
-
-        const tick = () => {
-            const overflowHeight = centerContent.clientHeight - centerFold.clientHeight;
-
-            document.body.style.height = `${overflowHeight + window.innerHeight}px`;
-
-            targetScroll = -(
-                document.documentElement.scrollTop || document.body.scrollTop
-            );
-            currentScroll += (targetScroll - currentScroll) * 0.1;
-            foldsContent.forEach(content => {
-                content.style.transform = `translateY(${currentScroll}px)`;
-            });
-            requestAnimationFrame(tick);
-        };
-        tick();
-
-
         setTimeout(function() {
             document.getElementById("olok").style.opacity = "1";
             const music = new Audio('src/img/mu.mp3');
