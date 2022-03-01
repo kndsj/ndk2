@@ -17,6 +17,8 @@
 </head>
 
 <body class="animate__animated animate__fadeIn">
+
+
     <div class="at" id="olok">
         <div class="uuuu" id="bok">
             <div class="text"></div>
@@ -44,33 +46,26 @@
         <div class="row">
             <div class="col-md-6 al">
                 <h1>El comienzo de algo nuevo con el amor de mi vida</h1>
-                <div class="aa">
+                <div class="aa mt-4">
                     <label class="txt1">02/02/2022</label> <label for="" class="txt1">| Temporada 1 |</label> <label for="" class="txt1">Unico e Increible </label>
                 </div>
 
-                <p>Llego el amor de mi vida, llego mi felicidad, el cambio que necesitaba un amor y realidad sincera. Comienza algo inolvidable </p>
+                <p class="mt-2" style="font-family:Arial, Helvetica, sans-serif; text-align: justify;">Kevin un chico de 18 años navegando por una red social donde se encontro a una chica llamada Nadia. Que al pasar los meses se convirtio en algo muy importante para el, llego un cambio que necesitaba , una conexion y felicidad dificil de
+                    explicar, el amor y paz que le da saber que tiene a la mejor chica del mundo es algo incomparable donde lo unico que quiere es pasar el resto de su vida con ella.
+                </p>
                 <button class="verr" id="btna">Ver ahora</button>
 
             </div>
             <div class="col-md-6 container-fluid bglg">
 
-                <!-- Small modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Small modal</button>
 
-                <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-sm">
-                        <div class="modal-content">
-                            ...
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 
-    <div class="wrapper">
+    <div class="wrapper" style="background: black !important; z-index: 2! !important;">
         <!-- MAIN CONTAINER -->
-        <section class="main-container ">
+        <section class="main-container">
             <div class="location" id="home">
                 <h2 id="home">Proximos Capitulos...</h2>
                 <p style="margin-top: -5px;">Posibles Cosas Que Marcan Nuestra Vida ❤️</p>
@@ -126,7 +121,7 @@
             class TextScramble {
                 constructor(el) {
                     this.el = el
-                    this.chars = ' N A D I A '
+                    this.chars = ' '
                     this.update = this.update.bind(this)
                 }
                 setText(newText) {
@@ -191,14 +186,12 @@
             const phrases = [
                 'Mi amor❤️',
                 'Mi niña❤️',
-                'Mi vida💘',
                 "Probablemente te preguntes",
                 "¿Por que Netflix?🤔",
                 "y es que",
                 'Quiero que el aqui y ahora',
                 'Sea como una pelicula🥺',
-                'Donde cada',
-                "Meta",
+                'Donde cada meta',
                 'Logro',
                 'Objetivo',
                 'Incluso desafio',
@@ -212,7 +205,9 @@
                 "Esto apenas es el inicio de una gran aventura",
                 "Donde quiero que esta aventura",
                 "Dure TODA MI VIDA",
-                "Te amo tanto nadia❤️",
+                "Te amo tanto mi nadia❤️",
+                "Aun faltan cosas por ver",
+                "asi que da click en 'ver ahora'"
             ]
 
             const el = document.querySelector('.text')
@@ -232,7 +227,7 @@
                 document.getElementById("olok").style.display = "none";
                 music.pause()
             }, 59200);
-        }, 99999999);
+        }, 1000);
 
         document.getElementById("btna").addEventListener("click", function() {
             window.open("src/page/scroll.html");

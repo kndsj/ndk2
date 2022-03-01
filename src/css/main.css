@@ -285,8 +285,8 @@ nav {
     z-index: 999999;
     width: 100% !important;
     height: 140% !important;
-    background: #201e26;
-    margin-top: 770px;
+    background: #1e1f26;
+    margin-top: 100vh;
     position: fixed;
     justify-content: center;
     align-items: center;
@@ -294,8 +294,8 @@ nav {
 }
 
 .text {
-    font-weight: 100;
-    font-size: 34px;
+    font-weight: 400;
+    font-size: 40px !important;
     color: #fafafa;
 }
 
@@ -321,6 +321,11 @@ h3 {
     padding: 10px;
     border: none;
     width: 200px;
+    transition: 0.4s ease all;
+}
+
+.verr:hover {
+    transform: scale(1.05);
 }
 
 .verr2 {
@@ -388,6 +393,8 @@ h1 {
 }
 
 .wrapper {
+    z-index: 9999;
+    background: black !important;
     margin-top: -293px !important;
     padding: 0;
     margin-bottom: 200px !important;
@@ -463,11 +470,17 @@ header {
     color: var(--dark);
 }
 
+section {
+    background: black !important;
+    z-index: 99999999 !important;
+}
+
 
 /* MAIN CONTIANER */
 
 .main-container {
-    background: black;
+    z-index: 999999999 !important;
+    background: black !important;
     padding-left: 100px;
     padding-right: 100px;
 }

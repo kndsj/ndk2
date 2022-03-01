@@ -14,7 +14,7 @@
 <body>
     <button type="button" style="display: none" class="btn btn-primary" id="liveToastBtn"></button>
 
-    <div class="position-fixed top-0 end-0 p-3" id="noti" style="z-index: 11" delay="10000" data-bs-delay="10000">
+    <div class="position-fixed top-0 end-0 p-3" id="noti" style="z-index: 11; background: #131417 !important;" delay="10000" data-bs-delay="10000">
         <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" delay="10000" data-bs-delay="10000">
             <div class="toast-header">
                 <img src="../img/noti.jpg" width="30" class="rounded me-2" alt="..." style="border-radius: 50% !important" />
@@ -108,7 +108,7 @@
                 const music = new Audio("../img/2.wav");
                 music.play();
             }, 5000);
-        }, 15000);
+        }, 999000);
 
         const noti = document.getElementById("noti");
         noti.addEventListener("mouseover", function() {
