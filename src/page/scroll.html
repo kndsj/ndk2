@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +15,7 @@
 <body>
     <button type="button" style="display: none" class="btn btn-primary" id="liveToastBtn"></button>
 
-    <div class="position-fixed top-0 end-0 p-3" id="noti" style="z-index: 11; background: #131417 !important;" delay="10000" data-bs-delay="10000">
+    <div class="position-fixed top-0 end-0 p-3" id="noti" style="z-index: 11; background: #FFFFFF !important;" delay="100" data-bs-delay="10000">
         <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" delay="10000" data-bs-delay="10000">
             <div class="toast-header">
                 <img src="../img/noti.jpg" width="30" class="rounded me-2" alt="..." style="border-radius: 50% !important" />
@@ -28,50 +29,50 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="word_split wrapper">
-            <span class="word word1">MI AMOR </span>
-            <span class="word word2">ESTO ES</span>
-            <span class="word word3">LO PRIMER</span>
-            <span class="word word4">QUE PASO</span>
-            <span class="word word5">DESDE</span>
-            <span class="word word6">QUE </span>
-            <span class="word word7">TE</span>
-            <span class="word word8">CONOCI</span>
-            <span class="word word8">AL AMOR</span>
-            <span class="word word8">DE MI VIDA</span>
+    <div class="container animate__backInDown animate__animated">
+        <div class="word_split wrapper ">
+            <span class="word word1 animate__fadeIn animate__animated animate__delay-1s">MI AMOR </span>
+            <span class="word word2 animate__fadeIn animate__animated animate__delay-2s">ESTO ES LO</span>
+            <span class="word word3 animate__fadeIn animate__animated animate__delay-3s">PRIMERO</span>
+            <span class="word word4 animate__fadeIn animate__animated animate__delay-4s">QUE PASO</span>
+            <span class="word word5 animate__fadeIn animate__animated animate__delay-5s">DESDE</span>
+            <span class="word word6 animate__fadeIn animate__animated animate__delay-5s">QUE </span>
+            <span class="word word7 animate__fadeIn animate__animated animate__delay-5s"></span>
+            <span class="word word8 animate__fadeIn animate__animated animate__delay-5s">CONOCI</span>
+            <span class="word word8 animate__fadeIn animate__animated animate__delay-5s">AL AMOR</span>
+            <span class="word word8 animate__fadeIn animate__animated animate__delay-5s">DE MI VIDA</span>
 
-            <div class="bubble1">
+            <div class="bubble1 animate__animated animate__backInLeft  animate__delay-1s">
                 <span class="the-arrow1"></span>
                 <strong>22 De Marzo 2021</strong> <br /> Comenzamos a hablar
             </div>
 
-            <div class="bubble2">
+            <div class="bubble2 animate__animated animate__backInRight  animate__delay-2s">
                 <span class="the-arrow2"></span>
                 <strong>15 De Abril 2021</strong> <br /> Nuestra primera videollamada😊, ya empezaba a sentir algo por ti
             </div>
-            <div class="bubble3">
+            <div class="bubble3 animate__animated animate__backInLeft  animate__delay-3s">
                 <span class="the-arrow3"></span>
                 <strong>19 De Abril 2021</strong> <br /> Me mandas una foto de tu carita🥰 con el mensaje: "te envio foto mia, sonriendo pa que sueñes bonito🥺🥺🤣❤️" - Dije de aqui soy
             </div>
-            <div class="bubble4">
+            <div class="bubble4 animate__animated animate__backInRight  animate__delay-4s">
                 <span class="the-arrow4"></span>
                 <strong>11 De Mayo 2021</strong> <br /> Mira un video en youtube mio -"nmmmms estaba en yutu jajaj viendo unos videos y me salieron unos tuyos y ya los vi y me di cuenta que amoooooooooo tus labioooos, que les hechas??? nmms se ven bien
                 hermosooooos con tu carita toda bonita pero amo amo ameeee tus labioooos🥺🥺🥺🥺🥺🥺🥺🥺" nmmmms dime ridicula ni pedo pero weeeeeeeeee me enamore de tus labios🥺😂😂😂😂😂😂😂
             </div>
-            <div class="bubble5">
+            <div class="bubble5 animate__animated animate__backInLeft  animate__delay-5s">
                 <span class="the-arrow5"></span>
                 <strong>27 De Julio 2021</strong> <br /> Me llega un mensaje con una captura de pantall:"tu me gustas Me voooy byeeee Te lo digo ahora que tengo valor Byeee"
             </div>
-            <div class="bubble6">
+            <div class="bubble6 animate__animated animate__backInRight animate__delay-5s ">
                 <span class="the-arrow6"></span>
                 <strong>19 De Agosto 2021</strong> <br /> Jugamos free😎🤣: "Ay holaaa 🤩 Por cierto ya descargue free pero estoy bien wey 🤡🤣🤣🤣 Hasta aquí mi reporte Joaquín"
             </div>
-            <div class="bubble7">
+            <div class="bubble7 animate__animated animate__backInLeft animate__delay-5s">
                 <span class="the-arrow7"></span>
                 <strong>28 De Septiembre 2021</strong> <br /> El cumpleños del amor de mi vida, y el primer te amo❤️
             </div>
-            <div class="bubble8">
+            <div class="bubble8 animate__animated animate__backInRight animate__delay-5s">
                 <span class="the-arrow8"></span>
                 <strong>2 De Enero 2022</strong> <br /> Comienza una aventura increible, que quiero que dure para toda la vida❤️
             </div>
@@ -108,7 +109,7 @@
                 const music = new Audio("../img/2.wav");
                 music.play();
             }, 5000);
-        }, 999000);
+        }, 15000);
 
         const noti = document.getElementById("noti");
         noti.addEventListener("mouseover", function() {
