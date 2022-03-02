@@ -4,22 +4,18 @@
     margin: 0;
 }
 
-p,
-strong {
-    color: #EEE !important;
-}
-
 html,
 body {
-    background: #EEE !important;
+    background: #131417 !important;
     height: 100%;
     margin: 0;
     padding: 0;
-    color: #EEE !important;
+    color: #eee !important;
     cursor: none;
 }
 
 body {
+    cursor: none !important;
     overflow: hidden;
 }
 
@@ -31,11 +27,11 @@ input {
 /*Circle and hearts*/
 
 .circle {
-    background: #979797;
-    border-radius: 20%;
+    background: #f697e1;
+    border-radius: 10%;
     left: calc(50% - 10px);
     top: 452px;
-    transition: all .5s cubic-bezier(0.22, 0.53, 0.37, 1.41);
+    transition: all 0.5s cubic-bezier(0.22, 0.53, 0.37, 1.41);
 }
 
 .hearts,
@@ -43,13 +39,14 @@ input {
 .hearts:after,
 .circle {
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 1px;
+    height: 1px;
     position: absolute;
 }
 
 .message,
 .circle {
+    color: #f697e1 !important;
     margin-top: 400px !important;
 }
 
@@ -61,12 +58,12 @@ h2,
 h5,
 h4,
 h3 {
-    color: black !important;
+    color: white !important;
 }
 
 .hearts:before,
 .hearts:after {
-    content: '';
+    content: "";
     position: absolute;
     border-radius: 50%;
     background: inherit;
@@ -75,19 +72,18 @@ h3 {
 button {
     background: none !important;
     border: none;
-    color: #EEE;
+    color: #131417;
+    cursor: none !important;
 }
 
 .hearts:before {
     left: 12px;
 }
 
-.hearts:after {
-    top: -12px;
-}
+.hearts:after {}
 
 #heart {
-    background: #979797;
+    background: #f697e1;
     z-index: 2;
     pointer-events: none;
 }
@@ -97,8 +93,8 @@ button {
     left: calc(50% - 10px);
     cursor: none;
     z-index: 1;
-    background: #979797;
-    transition: all .2s ease-in;
+    background: #f697e1;
+    transition: all 0.2s ease-in;
 }
 
 
@@ -132,7 +128,6 @@ button {
     border-top-style: solid;
     border-bottom-style: solid;
     background: transparent;
-    height: 9px;
 }
 
 
@@ -150,13 +145,13 @@ button {
 
 .message,
 label.lang {
-    font-family: 'Cabin', sans-serif;
+    font-family: "Cabin", sans-serif;
 }
 
 .message {
     position: absolute;
     width: 300px;
-    color: white;
+    color: #131417 !important;
     font-size: 18px;
     text-align: center;
     margin: 0 auto;
@@ -166,17 +161,11 @@ label.lang {
     opacity: 0;
 }
 
-.message p:first-child {
-    margin-bottom: 70px;
-}
-
 .love {
-    font-family: 'Lobster', cursive;
-    font-size: 30px;
+    margin-top: 10px;
+    font-family: "Lobster", cursive;
+    font-size: 20px;
 }
-
-
-/*Change language*/
 
 label.lang {
     margin-right: 15px;
@@ -231,11 +220,11 @@ input {
 /*Circle and hearts*/
 
 .circle {
-    background: #979797;
+    background: #f697e1;
     border-radius: 50%;
     left: calc(50% - 10px);
     top: 252px;
-    transition: all .5s cubic-bezier(0.22, 0.53, 0.37, 1.41);
+    transition: all 0.5s cubic-bezier(0.22, 0.53, 0.37, 1.41);
 }
 
 .hearts,
@@ -255,7 +244,7 @@ input {
 
 .hearts:before,
 .hearts:after {
-    content: '';
+    content: "";
     position: absolute;
     border-radius: 50%;
     background: inherit;
@@ -271,8 +260,9 @@ input {
 
 #heart,
 input {
-    background: #D33F49;
+    background: #d33f49;
     z-index: 2;
+    margin-top: -56px !important;
     pointer-events: none;
 }
 
@@ -282,7 +272,7 @@ input {
     cursor: none;
     z-index: 1;
     background: #f697e1;
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
 }
 
 
@@ -326,7 +316,6 @@ input {
     width: 400px;
     height: 400px;
     left: calc(50% - 200px);
-    top: 50px;
 }
 
 
@@ -334,13 +323,13 @@ input {
 
 .message,
 label.lang {
-    font-family: 'Cabin', sans-serif;
+    font-family: "Cabin", sans-serif;
 }
 
 .message input {
     position: absolute;
     width: 300px;
-    color: white;
+    color: #131417;
     font-size: 18px;
     text-align: center;
     margin: 0 auto;
@@ -350,12 +339,8 @@ label.lang {
     opacity: 0;
 }
 
-.message p:first-child {
-    margin-bottom: 70px;
-}
-
 .love {
-    font-family: 'Lobster', cursive;
+    font-family: "Lobster", cursive;
     font-size: 30px;
 }
 
@@ -364,11 +349,9 @@ label.lang {
 
 label.lang,
 input {
-    margin-right: 15px;
     display: block;
     float: right;
     color: #aaa;
-    padding: 15px 5px;
     position: relative;
     z-index: 5;
     cursor: pointer;

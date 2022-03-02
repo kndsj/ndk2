@@ -34,6 +34,8 @@
     <strong class="text">Amor estas a 1 paso de reclamar tu regalo</strong><br>
     <div class="te">
         <p>Simplemente tienes que adivinar una frase que siempre te digo, si no lo logras tendras que esperar, no te preocupes amor no hay prisa, te amo mi vida❤️</p>
+        <a href=""><label class="tls">En lo que adivinas la frase ¿quieres ver el proceso que hubo detras para crear todo esto? da click aqui</label></a>
+
     </div>
     <br><input id="ss" type="text" placeholder="*o ****** **** **n**** *m** *e ***">
     <button class="bb" id="bbt" onclick="hoña()">Probar</button>
@@ -41,32 +43,26 @@
 
 </div>
 
-<div class="hearth-ypos" style="left: 300px">
-    <div class="hearth-xpos">
-        <div class="hearth">
-            <img width="60" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Emoji_u2665.svg">
-        </div>
-        <div class="hearth-xpos">
-        </div>
-    </div>
 
 
 
-    <script>
-        function hoña() {
-            const bbt = document.getElementById("bbt")
-            const ss = document.getElementById("ss").value
-            const h = document.getElementById("sssh")
-            if (ss.toLowerCase() === "lo quiero todo contigo amor te amo") {
-                alert("Amor muchas felicidades, mandame mensaje diciendo: LO LOGRE")
-            } else {
-                h.style.display = "block"
-                setTimeout(function() {
-                    h.style.display = "none"
-                }, 2500);
-            }
+<script>
+    function hoña() {
+        const bbt = document.getElementById("bbt")
+        const ss = document.getElementById("ss").value
+        const h = document.getElementById("sssh")
+        if (ss.toLowerCase() === "lo quiero todo contigo amor te amo") {
+            alert("Amor muchas felicidades, mandame mensaje diciendo: LO LOGRE")
+        } else {
+            h.style.display = "block"
+            setTimeout(function() {
+                h.style.display = "none"
+            }, 2500);
         }
-    </script>
-    </body>
+    }
+</script>
+</body>
+
+
 
 </html>
