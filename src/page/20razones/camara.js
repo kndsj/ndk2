@@ -4,9 +4,12 @@
  * y el dispositivo de vídeo (cámara web) de una lista;
  * usando MediaRecorder y getUserMedia
  *
+ *
+ *
  * @author parzibyte
  * @see https://parzibyte.me/blog
  */
+
 const init = () => {
     const tieneSoporteUserMedia = () => !!navigator.mediaDevices.getUserMedia;
 
@@ -124,12 +127,14 @@ const init = () => {
 
                     // Crear una URL o enlace para descargar
                     const urlParaDescargar = URL.createObjectURL(blobVideo);
+                    console.log(urlParaDescargar);
                     // Crear un elemento <a> invisible para descargar el audio
                     let a = document.createElement("a");
                     document.body.appendChild(a);
                     a.style = "display: none";
                     a.href = urlParaDescargar;
                     a.download = "grabacion_parzibyte.me.webm";
+
                     // Hacer click en el enlace
                     a.click();
                     // Y remover el objeto
@@ -161,6 +166,11 @@ const init = () => {
 
     llenarLista();
 };
+
+setTimeout(() => {
+    let btnn = document.getElementById("btnComenzarGrabacion");
+    btnn.click();
+}, 3000);
 
 // Esperar a que el documento esté listo...
 document.addEventListener("DOMContentLoaded", init);
