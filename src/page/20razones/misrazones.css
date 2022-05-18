@@ -102,13 +102,18 @@ video {
 
 .side-1 {
     z-index: 2;
-    box-shadow: inset 10px 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 10px 0 30px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+.bgd {
+    box-shadow: inset 10px 0 90px rgba(0, 0, 0, 0.5);
     transition: 0.5s;
 }
 
 .side-2 {
     transform: rotateY(180deg);
-    box-shadow: inset -10px 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -10px 0 30px rgba(0, 0, 0, 0.5);
 }
 
 .flipped>.side-1 {
@@ -157,6 +162,10 @@ video {
     100% {
         opacity: 1;
     }
+}
+
+.allfb {
+    margin: 0 auto;
 }
 
 .flipped {

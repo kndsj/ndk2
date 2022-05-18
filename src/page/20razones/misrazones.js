@@ -1,4 +1,5 @@
 // http://stackoverflow.com/a/23371115/604040
+
 $(".page").click(function() {
     $(this).removeClass("no-anim").toggleClass("flipped");
     $(".page > div").click(function(e) {
