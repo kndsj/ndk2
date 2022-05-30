@@ -11,6 +11,7 @@ body {
 }
 
 h4 {
+    font-family: "Roboto", sans-serif;
     color: white;
     font-size: 18px;
 }
@@ -28,9 +29,16 @@ h4 {
 
 h6 {
     color: white;
-    font-size: 30px;
-    margin-top: 2vh;
+    font-size: 27px;
+    margin-top: 5px;
     font-family: "Roboto", sans-serif;
+}
+
+h5 {
+    margin-top: 50px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-size: 50px;
 }
 
 body {
